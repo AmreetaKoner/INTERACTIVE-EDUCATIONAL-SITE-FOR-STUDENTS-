@@ -1,0 +1,82 @@
+<?php session_start();?>
+
+<!Doctype html>
+
+<html style="background-image: url(images/ch2.jfif);"> <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/stylemodify.css"> <title>Modify Data</title> <style type="text/css">
+
+ 
+.form{
+
+background-color: white;
+
+width:30%;
+
+border-radius: 25px;
+
+padding: 0.5%;
+
+margin-top: 2%;
+
+margin-bottom: 2%;
+
+}
+
+p{ color:brown;
+
+font-weight: bold; }
+
+</style>
+
+</head align='center'>
+
+<body>
+
+<h2 id='title' align="center"><b><u> Your Information </u></b></h2>
+
+<h3 align="center"><b><u> Modify your data</u></b> </h3> <form method="post" action='rough.php'> <div class="form" align="center">
+
+<p>Name:</p><textarea id='text' rows='1' columns='50' name='name'
+class="one" required><?php echo
+
+$_SESSION['username'];?></textarea></br>
+
+<p>Email Id:</p><textarea id='text' rows='2' columns='50'
+
+name='email' required><?php echo
+$_SESSION['email'];?></textarea></br></br>
+
+<p>Contact No.:</p><textarea id='text' rows='1' columns='50'
+name='contact' required><?php echo
+$_SESSION['contact'];?></textarea></br>
+
+<p>City:</p><textarea id='text' rows='1' columns='50' name='city' required><?php echo $_SESSION['city'];?></textarea></br>
+
+ 
+<p>Country:</p><textarea id='text' rows='1' columns='50'
+
+name='country' required><?php echo
+$_SESSION['country'];?></textarea></br>
+
+<p>Address:</p><textarea id='text' rows='2' columns='50'
+name='address' required><?php echo
+$_SESSION['address'];?></textarea></br></br>
+
+<p>Enter new password:</p><textarea id='text' type="password" rows='1' columns='50' name="newpassword" ></textarea></br>
+
+<p>Re-enter New password:</p><textarea id='text' type="password" rows='1' columns='50' name='apassword' ></textarea></br>
+
+</br>
+
+<button type="submit" class="button button-block"/>Submit Changes</button>
+
+</div>
+
+</form>
+
+</body>
+
+</html>
